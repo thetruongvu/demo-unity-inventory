@@ -12,6 +12,7 @@ public class InventoryManager : MonoBehaviour
 
     public InventoryItemController[] InventoryItemControllers;
 
+
     private void Awake()
     {
         Instance = this;
@@ -54,6 +55,7 @@ public class InventoryManager : MonoBehaviour
     public void setInventoryItemControllers()
     {
         InventoryItemControllers = ItemContent.GetComponentsInChildren<InventoryItemController>();
+
         for(int i = 0; i<Items.Count; i++)
         {
             InventoryItemControllers[i].SetItem(Items[i]);
